@@ -21,8 +21,8 @@ import pandas as pd
 import torch
 import tqdm
 
-from sc.model.common import init_model, load_data, get_all_attributes
-from sc.examples import examples
+from model.common import init_model, load_data, get_all_attributes
+from examples import examples
 
 MFS = (
     "Moral Foundations",
@@ -130,7 +130,7 @@ def main(ex):
     )
     args.device = device
 
-    args.model = "..\\..\\gpt2-xl_rot_64_5epochs"
+    args.model = "../gpt2-xl_rot_64_5epochs"
     mode = 'action' if 'action' in args.model else 'rot'
     # mode = 'rot'
 
